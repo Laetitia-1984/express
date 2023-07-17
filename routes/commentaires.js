@@ -7,7 +7,7 @@ router.post ('/', (req, res) => {
     const data = {
         nomclient: req.body.nomClient,
         note: req.body.note,
-        descriptCom: req.body.descriptCom
+        commentaires: req.body.commentaires
     };
     const sql = dbCon.query ('INSERT INTO commentaire SET?', data, function (err, _rows, fields) {
         if (err) {
